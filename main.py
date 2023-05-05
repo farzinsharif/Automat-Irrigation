@@ -1,29 +1,39 @@
 import serial
 import time
+import csv
 
-# # make sure the 'COM#' is set according the Windows Device Manager
-# ser = serial.Serial('COM3', 9800, timeout=1)
-# time.sleep(2)
-#
-# for i in range(50):
-#     line = ser.readline()   # read a byte
-#     if line:
-#         string = line.rstrip()
-#         string = line.decode()  # convert the byte string to a unicode string
-#         #num = int(string) # convert the unicode string to an int
-#         print(string)
-#
-# ser.close()
 
-def read() :
-    ser = serial.Serial('COM3', 9800, timeout=1)
-    while True :
+def read():
+    counter = 0
+    global data_list
+    global time_list
+    global javad
+    data_list = list()
+    time_list = list()
+    ser = serial.Serial('COM3', 9800, timeout=2)
+    for i in range(1, 1000):
         line = ser.readline()
-        data = line.decode()
-        print(data)
+        data1 = line.strip()
+        data = data1.decode()
+        data_list.append(data)
+        time1 = time.ctime()
+        time_list.append(time1)
+        print(data, time1)
+        # counter =+ 1
+        # print(counter)
     ser.close()
+    javad = zip(data_list, time_list)
+    return javad
 
 
+def write():
+    header = ['humidity', 'time']
+    with open("humidity data.csv", 'w', encoding='UTF8', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow(header)
+        writer.writerows(javad)
 
-if __name__ == '__main__' :
+
+if __name__ == '__main__':
     read()
+    write()
