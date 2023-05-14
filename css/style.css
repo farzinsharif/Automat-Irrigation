@@ -18,20 +18,11 @@ a {
   text-decoration: none;
 }
 
-h1,
-h2,
-h3 {
-  padding-bottom: 20px;
-}
 
 p {
   margin: 10px 0;
 }
-#nav{
-  color: green;
-}
 
-/* Utility Classes */
 .container {
   margin: auto;
   max-width: 1100px;
@@ -60,16 +51,16 @@ p {
 #showcase .showcase-content h1 {
   font-size: 60px;
   line-height: 1.2em;
-  color: black;
+  color: white;
 }
 
 #showcase .showcase-content p {
   padding-bottom: 20px;
   line-height: 1.7em;
+  text-decoration: overline;
+  font-size: 40px;
 }
 
-
-/* Footer */
 #main-footer {
   text-align: center;
   background: #0c2461;
