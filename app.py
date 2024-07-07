@@ -13,7 +13,91 @@ posts = [
         'time': '23:47',
         'moisture_level': '3215'
 
-    }
+    },
+    {
+        'date': '15 july',
+        'time': '15:30',
+        'moisture_level': '1798'
+
+    },
+    {
+        'date': '15 july',
+        'time': '15:30',
+        'moisture_level': '1798'
+
+    },
+    {
+        'date': '15 july',
+        'time': '15:30',
+        'moisture_level': '1798'
+
+    },
+    {
+        'date': '15 july',
+        'time': '15:30',
+        'moisture_level': '1798'
+
+    },
+    {
+        'date': '15 july',
+        'time': '15:30',
+        'moisture_level': '1798'
+
+    },
+    {
+        'date': '15 july',
+        'time': '15:30',
+        'moisture_level': '1798'
+
+    },
+    {
+        'date': '15 july',
+        'time': '15:30',
+        'moisture_level': '1798'
+
+    },
+    {
+        'date': '15 july',
+        'time': '15:30',
+        'moisture_level': '1798'
+
+    },
+    {
+        'date': '15 july',
+        'time': '15:30',
+        'moisture_level': '1798'
+
+    },
+    {
+        'date': '15 july',
+        'time': '15:30',
+        'moisture_level': '1798'
+
+    },
+    {
+        'date': '15 july',
+        'time': '15:30',
+        'moisture_level': '1798'
+
+    },
+    {
+        'date': '15 july',
+        'time': '15:30',
+        'moisture_level': '1798'
+
+    },
+    {
+        'date': '15 july',
+        'time': '15:30',
+        'moisture_level': '1798'
+
+    },
+    {
+        'date': '15 july',
+        'time': '15:30',
+        'moisture_level': '1798'
+
+    },
 ]
 
 
