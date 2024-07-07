@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>show_me</title>
+</head>
+<body>
+    {% for post in posts %}
+        <h1>{{ post.date }}</h1>
+        <p> moisture level on {{ post.time }} is {{ post.moisture_level }}</p>
+    {% endfor %}
+</body>
+</html>
