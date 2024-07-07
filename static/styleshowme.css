@@ -10,7 +10,7 @@
 html,
 body {
   line-height: 1.7em;
-  background-color: #0c2461;
+  background-color: #00FFFF;
 }
 
 a {
@@ -37,7 +37,7 @@ p {
 
 /* Showcase */
 #showcase {
-  background: url("./img/anjir.jpg") center center/cover;
+  background: url("./img/anjir.jpg") no-repeat center center/cover;
   height: 600px;
   opacity: 0.8;
 }
