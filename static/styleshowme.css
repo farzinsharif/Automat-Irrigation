@@ -20,7 +20,11 @@ padding-left: 10px
 
 #text {
 padding-left: 15px;
+}
+
+#title {
 border-bottom: 5px solid black;
+padding-top: 5px;
 }
 
 
