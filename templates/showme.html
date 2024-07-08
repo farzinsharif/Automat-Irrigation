@@ -85,10 +85,13 @@
         </nav>
         <!-- Navbar -->
   </div>
-    {% for post in posts %}
-        <h1>{{ post.date }}</h1>
-        <p> moisture level on {{ post.time }} is {{ post.moisture_level }}</p>
-    {% endfor %}
+        <div id="data">
+                {% for post in posts %}
+                    <h1>{{ post.date }}</h1>
+                    <p id="text"> moisture level on {{ post.time }} is {{ post.moisture_level }}</p>
+                {% endfor %}
+        </div>
+
 
 
 

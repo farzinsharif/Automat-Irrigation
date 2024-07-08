@@ -11,7 +11,14 @@ posts = [
     {
         'date': '22 march',
         'time': '23:47',
-        'moisture_level': '3215'
+        'moisture_level': '3215',
+        'time': '23:47',
+        'moisture_level': '3215',
+        'time': '23:47',
+        'moisture_level': '3215',
+        'time': '23:47',
+        'moisture_level': '3215',
+
 
     },
     {
