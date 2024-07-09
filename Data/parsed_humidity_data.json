@@ -1,0 +1,58 @@
+[
+    {
+        "date": "09 July",
+        "entries": [
+            {
+                "time": "12:00:48",
+                "moisture_level": "898"
+            },
+            {
+                "time": "12:00:49",
+                "moisture_level": "895"
+            },
+            {
+                "time": "12:00:52",
+                "moisture_level": "895"
+            },
+            {
+                "time": "12:00:53",
+                "moisture_level": "895"
+            },
+            {
+                "time": "12:00:54",
+                "moisture_level": "895"
+            },
+            {
+                "time": "12:00:55",
+                "moisture_level": "895"
+            }
+        ]
+    },
+    {
+        "date": "08 July",
+        "entries": [
+            {
+                "time": "12:00:50",
+                "moisture_level": "896"
+            }
+        ]
+    },
+    {
+        "date": "10 July",
+        "entries": [
+            {
+                "time": "12:00:51",
+                "moisture_level": "895"
+            }
+        ]
+    },
+    {
+        "date": "13 October",
+        "entries": [
+            {
+                "time": "12:00:56",
+                "moisture_level": "895"
+            }
+        ]
+    }
+]

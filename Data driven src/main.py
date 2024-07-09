@@ -11,7 +11,7 @@ def read():
     data_list = list()
     time_list = list()
     ser = serial.Serial('COM3', 9800, timeout=2)
-    for i in range(1, 1000):
+    for i in range(1, 5):
         line = ser.readline()
         data1 = line.strip()
         data = data1.decode()
@@ -28,7 +28,7 @@ def read():
 
 def write():
     header = ['humidity', 'time']
-    with open("humidity data.csv", 'w', encoding='UTF8', newline='') as f:
+    with open("humidity_data.csv", 'w', encoding='UTF8', newline='') as f:
         writer = csv.writer(f)
         writer.writerow(header)
         writer.writerows(javad)
