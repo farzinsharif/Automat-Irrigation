@@ -1,39 +1,66 @@
+import schedule
+import time
 import pandas as pd
 from collections import defaultdict
 from datetime import datetime
 import json
+import os
 
-# Load the data from the uploaded CSV file
-file_path = '../Data/humidity_data.csv'
-data = pd.read_csv(file_path, header=None, names=['moisture_level', 'timestamp'], skiprows=1)
 
-# Dictionary to store grouped data by date
-grouped_data = defaultdict(list)
+def parse_and_save_data():
+    # Load the data from the CSV file
+    file_path = '../Data/humidity_data.csv'  # Change this to the actual path
+    data = pd.read_csv(file_path, header=None, names=['moisture_level', 'timestamp'], skiprows=1)
 
-# Parse each row and group by date
-for index, row in data.iterrows():
-    moisture_level = str(row['moisture_level'])
-    timestamp = row['timestamp']
-    try:
-        timestamp_dt = datetime.strptime(timestamp, '%a %b %d %H:%M:%S %Y')
-    except ValueError as e:
-        print(f"Error parsing timestamp: {e}")
-        continue
+    # Dictionary to store grouped data by date
+    grouped_data = defaultdict(list)
 
-    date_str = timestamp_dt.strftime('%d %B')  # Format date as '15 July'
-    time_str = timestamp_dt.strftime('%H:%M:%S')  # Format time as '15:30'
+    # Parse each row and group by date
+    for index, row in data.iterrows():
+        moisture_level = str(row['moisture_level'])
+        timestamp = row['timestamp']
+        try:
+            timestamp_dt = datetime.strptime(timestamp, '%a %b %d %H:%M:%S %Y')
+        except ValueError as e:
+            print(f"Error parsing timestamp: {e}")
+            continue
 
-    grouped_data[date_str].append({
-        'time': time_str,
-        'moisture_level': moisture_level
-    })
+        date_str = timestamp_dt.strftime('%d %B')  # Format date as '15 July'
+        time_str = timestamp_dt.strftime('%H:%M:%S')  # Format time as '15:30'
 
-# Convert the grouped data into the desired structure
-result = [{'date': date, 'entries': entries} for date, entries in grouped_data.items()]
+        grouped_data[date_str].append({
+            'time': time_str,
+            'moisture_level': moisture_level
+        })
 
-# Save the result to a JSON file
-output_path = '../Data/parsed_humidity_data.json'
-with open(output_path, 'w') as json_file:
-    json.dump(result, json_file, indent=4)
+    # Convert the grouped data into the desired structure
+    new_data = [{'date': date, 'entries': entries} for date, entries in grouped_data.items()]
 
-print(f"Parsed data saved to: {output_path}")
+    # Load existing data from the JSON file
+    output_path = '../Data/parsed_humidity_data.json'  # Change this to the desired output path
+    if os.path.exists(output_path):
+        with open(output_path, 'r') as json_file:
+            existing_data = json.load(json_file)
+    else:
+        existing_data = []
+
+    # Append new data to existing data
+    existing_data.extend(new_data)
+
+    # Save the updated data back to the JSON file
+    with open(output_path, 'w') as json_file:
+        json.dump(existing_data, json_file, indent=4)
+
+    print(f"Parsed data appended to: {output_path}")
+
+
+# Schedule the task every 30 minutes
+schedule.every(5).seconds.do(parse_and_save_data)
+
+# Run the schedule
+while True:
+    schedule.run_pending()
+    time.sleep(1)
+
+
+

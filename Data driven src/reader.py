@@ -1,7 +1,7 @@
 import serial
 import time
 import csv
-
+import schedule
 
 def read():
     counter = 0
@@ -11,7 +11,7 @@ def read():
     data_list = list()
     time_list = list()
     ser = serial.Serial('COM3', 9800, timeout=2)
-    for i in range(1, 5):
+    for i in range(1, 3):
         line = ser.readline()
         data1 = line.strip()
         data = data1.decode()
@@ -28,12 +28,16 @@ def read():
 
 def write():
     header = ['humidity', 'time']
-    with open("humidity_data.csv", 'w', encoding='UTF8', newline='') as f:
+    with open("../Data/humidity_data.csv", 'a', encoding='UTF8', newline='') as f:
         writer = csv.writer(f)
-        writer.writerow(header)
+        # writer.writerow(header)
         writer.writerows(javad)
 
 
-if __name__ == '__main__':
-    read()
-    write()
+schedule.every(4).seconds.do(read) # this must be every 30 min
+schedule.every(4).seconds.do(write) # this must be every 30 min
+
+while True:
+    schedule.run_pending()
+    time.sleep(1)
+
