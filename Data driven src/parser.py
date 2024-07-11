@@ -6,10 +6,9 @@ from datetime import datetime
 import json
 import os
 
-
 def parse_and_save_data():
     # Load the data from the CSV file
-    file_path = '../Data/humidity_data.csv'  # Change this to the actual path
+    file_path = '../Data/humidity_data.csv'  # Change this to the actual path if needed
     data = pd.read_csv(file_path, header=None, names=['moisture_level', 'timestamp'], skiprows=1)
 
     # Dictionary to store grouped data by date
@@ -44,15 +43,26 @@ def parse_and_save_data():
     else:
         existing_data = []
 
-    # Append new data to existing data
-    existing_data.extend(new_data)
+    # Merge new data with existing data, avoiding duplicates
+    date_to_entries = {entry['date']: entry['entries'] for entry in existing_data}
+    for new_entry in new_data:
+        date = new_entry['date']
+        if date in date_to_entries:
+            existing_times = {entry['time'] for entry in date_to_entries[date]}
+            for entry in new_entry['entries']:
+                if entry['time'] not in existing_times:
+                    date_to_entries[date].append(entry)
+        else:
+            date_to_entries[date] = new_entry['entries']
+
+    # Convert the merged data back to the required format
+    merged_data = [{'date': date, 'entries': entries} for date, entries in date_to_entries.items()]
 
     # Save the updated data back to the JSON file
     with open(output_path, 'w') as json_file:
-        json.dump(existing_data, json_file, indent=4)
+        json.dump(merged_data, json_file, indent=4)
 
-    print(f"Parsed data appended to: {output_path}")
-
+    print(f"Parsed data saved to: {output_path}")
 
 # Schedule the task every 30 minutes
 schedule.every(5).seconds.do(parse_and_save_data)
@@ -61,6 +71,3 @@ schedule.every(5).seconds.do(parse_and_save_data)
 while True:
     schedule.run_pending()
     time.sleep(1)
-
-
-

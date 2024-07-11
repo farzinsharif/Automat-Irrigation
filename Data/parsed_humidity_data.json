@@ -1,9 +1,21 @@
 [
     {
-        "date": "09 July",
+        "date": "08 July",
         "entries": [
             {
-                "time": "13:51:51",
+                "time": "15:53:26",
+                "moisture_level": "899"
+            },
+            {
+                "time": "15:53:32",
+                "moisture_level": "899"
+            },
+            {
+                "time": "15:53:37",
+                "moisture_level": "899"
+            },
+            {
+                "time": "15:53:43",
                 "moisture_level": "899"
             }
         ]
@@ -12,132 +24,194 @@
         "date": "09 July",
         "entries": [
             {
-                "time": "13:51:51",
+                "time": "15:53:49",
                 "moisture_level": "899"
             },
             {
-                "time": "15:14:53",
-                "moisture_level": "897"
-            },
-            {
-                "time": "15:14:54",
-                "moisture_level": "894"
-            }
-        ]
-    },
-    {
-        "date": "09 July",
-        "entries": [
-            {
-                "time": "13:51:51",
+                "time": "15:54:53",
                 "moisture_level": "899"
             },
             {
-                "time": "15:14:53",
-                "moisture_level": "897"
-            },
-            {
-                "time": "15:14:54",
-                "moisture_level": "894"
-            }
-        ]
-    },
-    {
-        "date": "09 July",
-        "entries": [
-            {
-                "time": "13:51:51",
-                "moisture_level": "899"
-            },
-            {
-                "time": "15:14:53",
-                "moisture_level": "897"
-            },
-            {
-                "time": "15:14:54",
-                "moisture_level": "894"
-            },
-            {
-                "time": "15:15:00",
-                "moisture_level": "897"
-            },
-            {
-                "time": "15:15:01",
-                "moisture_level": "894"
-            }
-        ]
-    },
-    {
-        "date": "09 July",
-        "entries": [
-            {
-                "time": "13:51:51",
-                "moisture_level": "899"
-            },
-            {
-                "time": "15:14:53",
-                "moisture_level": "897"
-            },
-            {
-                "time": "15:14:54",
-                "moisture_level": "894"
-            },
-            {
-                "time": "15:15:00",
-                "moisture_level": "897"
-            },
-            {
-                "time": "15:15:01",
-                "moisture_level": "894"
-            },
-            {
-                "time": "15:15:07",
-                "moisture_level": "897"
-            },
-            {
-                "time": "15:15:08",
-                "moisture_level": "894"
-            }
-        ]
-    },
-    {
-        "date": "09 July",
-        "entries": [
-            {
-                "time": "13:51:51",
-                "moisture_level": "899"
-            },
-            {
-                "time": "15:14:53",
-                "moisture_level": "897"
-            },
-            {
-                "time": "15:14:54",
-                "moisture_level": "894"
-            },
-            {
-                "time": "15:15:00",
-                "moisture_level": "897"
-            },
-            {
-                "time": "15:15:01",
-                "moisture_level": "894"
-            },
-            {
-                "time": "15:15:07",
-                "moisture_level": "897"
-            },
-            {
-                "time": "15:15:08",
-                "moisture_level": "894"
-            },
-            {
-                "time": "15:15:13",
+                "time": "15:54:59",
                 "moisture_level": "898"
             },
             {
-                "time": "15:15:14",
+                "time": "15:55:04",
+                "moisture_level": "899"
+            },
+            {
+                "time": "15:55:10",
+                "moisture_level": "899"
+            }
+        ]
+    },
+    {
+        "date": "10 July",
+        "entries": [
+            {
+                "time": "15:55:16",
+                "moisture_level": "899"
+            },
+            {
+                "time": "15:55:21",
+                "moisture_level": "899"
+            },
+            {
+                "time": "15:55:27",
+                "moisture_level": "899"
+            },
+            {
+                "time": "12:32:39",
+                "moisture_level": "897"
+            },
+            {
+                "time": "12:32:45",
+                "moisture_level": "897"
+            },
+            {
+                "time": "12:32:51",
+                "moisture_level": "897"
+            },
+            {
+                "time": "12:43:57",
+                "moisture_level": "897"
+            },
+            {
+                "time": "12:44:02",
+                "moisture_level": "898"
+            },
+            {
+                "time": "12:44:18",
+                "moisture_level": "898"
+            },
+            {
+                "time": "12:44:24",
+                "moisture_level": "898"
+            },
+            {
+                "time": "12:44:43",
+                "moisture_level": "898"
+            },
+            {
+                "time": "12:45:10",
+                "moisture_level": "898"
+            },
+            {
+                "time": "12:45:16",
+                "moisture_level": "897"
+            },
+            {
+                "time": "12:46:44",
+                "moisture_level": "898"
+            },
+            {
+                "time": "12:46:49",
+                "moisture_level": "898"
+            },
+            {
+                "time": "12:46:55",
+                "moisture_level": "897"
+            },
+            {
+                "time": "12:47:01",
+                "moisture_level": "898"
+            },
+            {
+                "time": "12:47:06",
+                "moisture_level": "898"
+            },
+            {
+                "time": "12:47:12",
+                "moisture_level": "897"
+            },
+            {
+                "time": "12:47:18",
+                "moisture_level": "898"
+            },
+            {
+                "time": "12:47:24",
+                "moisture_level": "898"
+            }
+        ]
+    },
+    {
+        "date": "11 July",
+        "entries": [
+            {
+                "time": "15:03:01",
                 "moisture_level": "894"
+            },
+            {
+                "time": "15:03:06",
+                "moisture_level": "894"
+            },
+            {
+                "time": "15:03:12",
+                "moisture_level": "893"
+            },
+            {
+                "time": "15:03:18",
+                "moisture_level": "893"
+            },
+            {
+                "time": "15:03:23",
+                "moisture_level": "893"
+            },
+            {
+                "time": "15:03:29",
+                "moisture_level": "893"
+            },
+            {
+                "time": "15:03:35",
+                "moisture_level": "893"
+            },
+            {
+                "time": "15:03:40",
+                "moisture_level": "850"
+            },
+            {
+                "time": "15:03:46",
+                "moisture_level": "776"
+            },
+            {
+                "time": "15:03:52",
+                "moisture_level": "894"
+            },
+            {
+                "time": "15:03:58",
+                "moisture_level": "691"
+            },
+            {
+                "time": "15:04:03",
+                "moisture_level": "717"
+            },
+            {
+                "time": "15:04:09",
+                "moisture_level": "892"
+            },
+            {
+                "time": "15:04:15",
+                "moisture_level": "892"
+            },
+            {
+                "time": "15:04:20",
+                "moisture_level": "893"
+            },
+            {
+                "time": "15:04:26",
+                "moisture_level": "892"
+            },
+            {
+                "time": "15:04:32",
+                "moisture_level": "892"
+            },
+            {
+                "time": "15:04:37",
+                "moisture_level": "893"
+            },
+            {
+                "time": "15:04:43",
+                "moisture_level": "892"
             }
         ]
     }

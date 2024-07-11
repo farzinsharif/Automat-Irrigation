@@ -11,7 +11,7 @@ def read():
     data_list = list()
     time_list = list()
     ser = serial.Serial('COM3', 9800, timeout=2)
-    for i in range(1, 3):
+    for i in range(1, 2):
         line = ser.readline()
         data1 = line.strip()
         data = data1.decode()
